@@ -167,6 +167,21 @@ function getCargoCapacityTotal(character) {
  */
 function getFastestStarshipName(character) {
     // TODO: Add your code here.
+    let fastest;
+    for (let i = 0; i < character.starships.length; i++) {
+      if (character.starships[0] === "") {
+        fastest = character.starships[0].name = `none`;
+        return fastest;
+      }
+      fastest = character.starships[0];
+      if (fastest[`max_atmosphering_speed`] < i[`max_atmosphering_speed`]) {
+        let temp = i;
+        fastest = temp;
+
+      }
+      return fastest.name;
+    }
+    return fastest;
 }
 
 /**
